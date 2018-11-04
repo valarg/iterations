@@ -16,10 +16,6 @@ void __attribute__((__no_instrument_function__)) reset_ticks()
     g_ticks = 0;
 }
 
-
-using namespace std;
-
-
 extern "C"
 {
     void __attribute__((__no_instrument_function__))
