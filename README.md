@@ -3,6 +3,12 @@ C++ Module for Calculating Iterations
 
 
 This module counts iterations in your code (function calls (recursions) , and while/for loops).
+Warning! It doesn't currently work with file stream in/out (counts too many iterations)
+
+Instalation:
+1. Copy and link "iterations" file to your C++ project
+2. Add compiler flag "-finstrument-functions" to your project
+3. Include iterations module in your cpp file (#include "iterations")
 
 Data Types:
 
