@@ -1,0 +1,33 @@
+#define tick_int unsigned long long int
+
+#define for(x)  for(x, ++g_ticks)
+#define while(x)  while((x) && ++g_ticks)
+
+
+tick_int g_ticks = 0;
+
+tick_int __attribute__((__no_instrument_function__)) get_ticks()
+{
+    return g_ticks;
+}
+
+void __attribute__((__no_instrument_function__)) reset_ticks()
+{
+    g_ticks = 0;
+}
+
+
+using namespace std;
+
+
+extern "C"
+{
+    void __attribute__((__no_instrument_function__))
+         __cyg_profile_func_enter(void *this_fn, void *call_site)
+    {
+         ++g_ticks;
+    }
+
+    void __attribute__((__no_instrument_function__))
+         __cyg_profile_func_exit(void *this_fn, void *call_site) {}
+}
