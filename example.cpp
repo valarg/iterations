@@ -9,10 +9,10 @@ void sample()
 int main()
 {
     // Reseting counter to 0
-	reset_ticks();
+    reset_ticks();
 
-	//Using our code below
-	for(int i = 0; i < 1000; i++)
+    //Using our code below
+    for(int i = 0; i < 1000; i++)
     {
         1+5;
     }
