@@ -14,13 +14,10 @@ int main()
     //Using our code below
     for(int i = 0; i < 1000; i++)
     {
-        1+5;
+        sample(); // Function call is considered as an iteration as well
+        1+5; //This basic math calculus isn't considered as an iteration
     }
-
-    sample();
-    sample();
-    sample();
-
+   
     //Getting Number of Iterations after our code gets executed
     tick_int result = get_ticks();
 
